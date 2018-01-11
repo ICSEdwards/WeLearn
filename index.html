@@ -1,34 +1,58 @@
 <!DOCTYPE html>
 <html>
 
-<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
-
 <head>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-</head>
+    <link rel="stylesheet" media="screen and (min-width: 0px)" href="mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 533px)" href="tablet.css">
+    <link rel="stylesheet" media="screen and (min-width: 700px)" href="style.css">
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script>
+
+    function checkForm(form)
+    {
+      if(form.firstname.value == "") {
+        alert("Error: First name is empty!");
+        form.firstname.focus();
+        return false;
+      }
+
+      if (form.lastname.value == "") {
+        alert("Error: Last name is empty!");
+        form.lastname.focus();
+        return false;
+      }
+
+      return true;
+    }
+
+  </script>
+    </head>
+  
 <body>
-  <div class="box">
-    <h1>We Learn</h1>
-    <img class="image" src="book.png">
-    <img class="image1" src="students.jpg">
-  </div>
-    <br></br>
-    <h2>Welcome to the <em> We Learn </em> website. Here, you will be given many challenging questions that will you do
-      extensive<br></br> thinking in order to solve a porblem. These questions will be based off different school subjects. This
-      website is driven<br></br> to increase the confidence of students when working with difficult questions.</h2>
-    <h3>Before we begin, you will need to login in. To login into an account, simply type in your first and last name.</h3>
-    <a href="login.html"> <button class="button">Login</button></a>
+  <img src = "logo.png" id ="logo">
+    <h1> We Learn</h1>
+    <img src = "logo.png" id ="logo2">
+<div id = "container">
+<div id = "loginform">
 
+<form action="grades.html" method="post" onsubmit="return checkForm(this);">
+    <div id="signin">
+    <h1>Sign In</h1><hr> <br><br><br><br><br>
+    </div>
+    
+    <input type="text" id="firstname" name="firstname" placeholder="Enter First Name">
+    
+    <br><br>
+
+    <input type="text" id="lastname" name="lastname" placeholder = "Enter Last Name"><br><br><br>
+    
+
+    <a href = "grades.html"><input type ="submit" id="loginbutton" value ="Submit"></a>
+
+</form> 
+</div>
+</div>
 </body>
-
 </html>
-
-<!--Aqua
-#3AAFA9
-Blue
-#31668E-->
